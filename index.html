@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>L-BUY</title>
+
+    <!-- ICONS -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <p>💕 Free delivery on orders above ₦30,000</p>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <h1>L-BUY</h1>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="search-bar">
+
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search for fashion items..."
+                autocomplete="off">
+
+                <button id="search-btn">
+                    Search
+                </button>
+                <div id="suggestions"></div>
+            </div>
+
+    
+
+</div>
+
+        <!-- NAV RIGHT -->
+        <div class="nav-right">
+
+            <!-- ACCOUNT -->
+            <div class="nav-item">
+                <i class="fa-regular fa-user"></i>
+                <a href="account.html" class="account-btn">
+                Account
+                </a>
+            </div>
+
+            <!-- HELP -->
+            <div class="nav-item">
+                <i class="fa-regular fa-circle-question"></i>
+                <span>Help</span>
+            </div>
+
+            <!-- CART -->
+            <div class="cart-icon">
+
+    <a href="cart.html">
+        🛒 Cart
+        <span id="cart-count">0</span>
+    </a>
+
+</div>
+
+        </div>
+
+    </header>
+
+    <!-- HERO SECTION -->
+<section class="hero-section">
+
+    <!-- LEFT CATEGORIES -->
+    <div class="categories">
+
+        <div class="category">
+            <i class="fa-solid fa-shirt"></i>
+            <span>Fashion</span>
+        </div>
+
+        <div class="category">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Bags</span>
+        </div>
+
+        <div class="category">
+            <i class="fa-solid fa-shoe-prints"></i>
+            <span>Shoes</span>
+        </div>
+
+        <div class="category">
+            <i class="fa-solid fa-gem"></i>
+            <span>Jewelry</span>
+        </div>
+
+        <div class="category">
+            <i class="fa-solid fa-heart"></i>
+            <span>Beauty</span>
+        </div>
+
+        <div class="category">
+            <i class="fa-solid fa-crown"></i>
+            <span>Luxury</span>
+        </div>
+
+        <div class="category">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <span>Accessories</span>
+        </div>
+
+        <div class="category">
+            <i class="fa-solid fa-fire"></i>
+            <span>Trending</span>
+        </div>
+
+    </div>
+
+    <!-- HERO SLIDER -->
+    <div class="hero-slider">
+
+        <!-- SLIDER IMAGES -->
+<div class="slides">
+
+    <img class="slide active" src="image/slide2.jpeg" alt="">
+    <img class="slide" src="image/slide3.jpeg" alt="">
+    <img class="slide" src="image/slide2.jpeg" alt="">
+    <img class="slide" src="image/slide4.jpeg" alt="">
+
+</div>
+
+        <!-- TEXT -->
+        <div class="hero-text">
+            <h1>NEW FASHION COLLECTION 💕</h1>
+
+            <p>
+                Discover premium styles made for confident women.
+            </p>
+
+            <button>Shop Now</button>
+        </div>
+
+    </div>
+
+    <!-- RIGHT CARDS -->
+    <div class="hero-right">
+
+        <div class="right-card">
+            <i class="fa-solid fa-truck"></i>
+
+            <div>
+                <h4>Fast Delivery</h4>
+                <p>Nationwide shipping</p>
+            </div>
+        </div>
+
+        <div class="right-card">
+            <i class="fa-solid fa-credit-card"></i>
+
+            <div>
+                <h4>Secure Payment</h4>
+                <p>100% protected payment</p>
+            </div>
+        </div>
+
+        <div class="right-card">
+            <i class="fa-solid fa-headset"></i>
+
+            <div>
+                <h4>24/7 Support</h4>
+                <p>Always here for you</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TRENDING PRODUCTS -->
+<section class="trending">
+
+    <!-- TITLE -->
+    <div class="section-title">
+        <h2>🔥 Trending Products</h2>
+
+        <p>Best selling fashion items right now</p>
+    </div>
+
+    <!-- PRODUCTS GRID -->
+    <div class="products-grid">
+
+        <!-- PRODUCT 1 -->
+       <div class="product-card"
+onclick="openProduct(
+'Luxury Pink Dress',
+25000,
+'images/dress.jpg'
+)">
+
+    <!-- WISHLIST -->
+    <div class="wishlist-icon"
+
+    onclick="event.stopPropagation();
+    addToWishlist(
+    'Luxury Pink Dress',
+    25000,
+    'image/pink dress.jpg'
+    )">
+
+        ❤️
+
+    </div>
+
+    <!-- IMAGE -->
+    <div class="product-image">
+
+        <img src="image/pink dress.jpg" alt="">
+
+    </div>
+
+    <!-- INFO -->
+    <div class="product-info">
+
+        <h3>Luxury Pink Dress</h3>
+
+        <p class="price">
+            ₦25,000
+        </p>
+
+        <button
+        onclick="event.stopPropagation();
+        addToCart(
+        'Luxury Pink Dress',
+        25000,
+        'image/pink dress.jpg'
+        )">
+
+            Add to Cart
+
+        </button>
+
+    </div>
+
+</div>
+
+        <!-- PRODUCT 2 -->
+       
+            <div class="product-card"
+            data-name="premium hand bag"
+            onclick="openProduct(
+            'Premium Hand Bag',
+             18000,
+             'image/pink bag.jpg'
+            )">
+
+            
+
+            <div class="product-image">
+                <img src="image/pink bag.jpg" alt="">
+            </div>
+
+            <div class="product-info">
+
+                <h3>Premium Hand Bag</h3>
+
+                <p class="price">₦18,000</p>
+
+                <button onclick="addToCart(
+                    'Premium Hand Bag',
+                    18000,
+                    'image/pink bag.jpg'
+                )">Add to Cart</button>
+
+            </div>
+
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="product-card"
+        data-name="Heels"
+            onclick="openProduct(
+            'High Heels',
+             14500,
+             'image/heels.jpg'
+            )">
+
+            <div class="product-image">
+                <img src="image/heels.jpg" alt="">
+            </div>
+
+            <div class="product-info">
+
+                <h3>High Heels</h3>
+
+                <p class="price">₦14,500</p>
+
+                <button onclick="addToCart(
+                    'High Heels',
+                    14500,
+                    'image/heels.jpg'
+                )">Add to Cart</button>
+
+            </div>
+
+        </div>
+
+        <!-- PRODUCT 4 -->
+        <div class="product-card"
+            data-name="bone straight wig"
+            onclick="openProduct(
+            'Bone Straight Wig',
+             70000,
+             'image/wig.avif'
+            )">
+
+            <div class="product-image">
+                <img src="image/wig.avif" alt="">
+            </div>
+
+            <div class="product-info">
+
+                <h3>Bone Straight Wig</h3>
+
+                <p class="price">₦70,000</p>
+
+                <button onclick="addToCart(
+                    'Bone Straight Wig',
+                    70000,
+                    'image/wig.avif'
+                )">Add to Cart</button>
+
+            </div>
+
+        </div>
+
+        <!-- PRODUCT 5 -->
+        <div class="product-card"
+            data-name="luxury perfume"
+            onclick="openProduct(
+            'Luxury Perfume',
+             12000,
+             'image/perfume.jpeg'
+            )">
+
+            <div class="product-image">
+                <img src="image/perfume.jpeg" alt="">
+            </div>
+
+            <div class="product-info">
+
+                <h3>Luxury Perfume</h3>
+
+                <p class="price">₦12,000</p>
+
+                <button onclick="addToCart(
+                    'Luxury Perfume',
+                    12000,
+                    'image/perfume.jpeg'
+                )">Add to Cart</button>
+
+            </div>
+
+        </div>
+
+        <!-- PRODUCT 6 -->
+        <div class="product-card"
+            data-name="diamond jewelry set"
+            onclick="openProduct(
+            'Diamond Jewelry Set',
+             40000,
+             'image/necklace.jpg'
+            )">
+
+            <div class="product-image">
+                <img src="image/necklace.jpg" alt="">
+            </div>
+
+            <div class="product-info">
+
+                <h3>Diamond Jewelry Set</h3>
+
+                <p class="price">₦40,000</p>
+
+                <button onclick="addToCart(
+                    'Diamond Jewelry Set',
+                    40000,
+                    'image/necklace.jpg'
+                )">Add to Cart</button>
+
+            </div>
+
+        </div>
+
+        <!-- PRODUCT 7 -->
+        <div class="product-card"
+            data-name="Barcelona F.C Special Edition Jersey 2025/2026 Season"
+            onclick="openProduct(
+            'Barcelona F.C Special Edition Jersey 2025/2026 Season',
+             20000,
+             'image/barcelona.jpg'
+            )">
+
+            <div class="product-image">
+                <img src="image/barcelona.jpg" alt="">
+            </div>
+
+            <div class="product-info">
+
+                <h3>Barcelona F.C Special Edition Jersey 2025/2026 Season</h3>
+
+                <p class="price">₦20,000</p>
+
+                <button onclick="addToCart(
+                    'Barcelona F.C Special Edition Jersey 2025/2026 Season',
+                    20000,
+                    'image/barcelona.jpg'
+                )">Add to Cart</button>
+
+            </div>
+
+        </div>
+
+         <div class="product-card"
+            data-name="Ladies/Female Waist Chain Gold-Waist Bead"
+            onclick="openProduct(
+            'Ladies/Female Waist Chain Gold-Waist Bead',
+             7000,
+             'image/waist.jpg'
+            )">
+
+            <div class="product-image">
+                <img src="image/waist.jpg" alt="">
+            </div>
+
+            <div class="product-info">
+
+                <h3>Ladies/Female Waist Chain Gold-Waist Bead</h3>
+
+                <p class="price">₦7,000</p>
+
+                <button onclick="addToCart(
+                    'Ladies/Female Waist Chain Gold-Waist Bead',
+                    7000,
+                    'image/waist.jpg'
+                )">Add to Cart</button>
+
+            </div>
+
+        </div>
+
+         <div class="product-card"
+            data-name="Luxury and Unique women t shirt Polo Top For Ladies - Pink"
+            onclick="openProduct(
+            'Luxury and Unique women t shirt Polo Top For Ladies - Pink',
+             12500,
+             'image/polo shirt.jpg'
+            )">
+
+            <div class="product-image">
+                <img src="image/polo shirt.jpg" alt="">
+            </div>
+
+            <div class="product-info">
+
+                <h3>Luxury and Unique women t shirt Polo Top For Ladies - Pink</h3>
+
+                <p class="price">₦12,500</p>
+
+                <button onclick="addToCart(
+                    'Luxury and Unique women t shirt Polo Top For Ladies - Pink',
+                    12500,
+                    'image/polo shirt.jpg'
+                )">Add to Cart</button>
+
+            </div>
+
+        </div>
+
+        <div class="product-card"
+            data-name="Press on Nails Medium Long Rhinestone Pink False Nails Square Bling Glossy 3D False Nail Tips Artificial Nails Finger Manicure for Women and Girls-24pcs"
+            onclick="openProduct(
+            'Press on Nails Medium Long Rhinestone Pink False Nails Square Bling Glossy 3D False Nail Tips Artificial Nails Finger Manicure for Women and Girls-24pcs',
+             7150,
+             'image/female nails.jpg'
+            )">
+
+            <div class="product-image">
+                <img src="image/female nails.jpg" alt="">
+            </div>
+
+            <div class="product-info">
+
+                <h3>Press on Nails Medium Long Rhinestone Pink False Nails Square Bling Glossy 3D False Nail Tips Artificial Nails Finger Manicure for Women and Girls-24pcs</h3>
+
+                <p class="price">₦7,150</p>
+
+                <button onclick="addToCart(
+                    'Press on Nails Medium Long Rhinestone Pink False Nails Square Bling Glossy 3D False Nail Tips Artificial Nails Finger Manicure for Women and Girls-24pcs',
+                    7150,
+                    'image/female nails.jpg'
+                )">Add to Cart</button>
+
+            </div>
+
+        </div> 
+
+    </div>
+
+</section>
+
+<!-- FLASH SALES -->
+<section class="flash-sales">
+
+    <!-- HEADER -->
+    <div class="flash-header">
+
+        <div class="flash-left">
+            <h2>⚡ Flash Sales</h2>
+
+            <p>Limited time fashion deals</p>
+        </div>
+
+        <!-- COUNTDOWN -->
+        <div class="countdown">
+
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>Hours</small>
+            </div>
+
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>Seconds</small>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FLASH PRODUCTS -->
+    <div class="flash-grid">
+
+        <!-- ITEM 1 -->
+        <div class="flash-card">
+
+            <div class="sale-tag">-40%</div>
+
+            <img src="image/office dress.jpg" alt="">
+
+            <h3>Classic Cooperate Office Ladies Gown</h3>
+
+            <div class="prices">
+                <span class="new-price">₦18,000</span>
+                <span class="old-price">₦30,000</span>
+            </div>
+
+            <button onclick="addToCart(
+                'Classic Cooperate Office Ladies Gown',
+                18000,
+                'image/office dress.jpg'
+            )">Add to Cart</button>
+
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="flash-card">
+
+            <div class="sale-tag">-25%</div>
+
+            <img src="image/ladies watch.jpg" alt="">
+
+            <h3>STY Lady Watch + Wallet Set Women Wrist Watch Black Purse Female Quartz Watch PU Short Wallet</h3>
+
+            <div class="prices">
+                <span class="new-price">₦12,000</span>
+                <span class="old-price">₦16,000</span>
+            </div>
+
+            <button onclick="addToCart(
+                'STY Lady Watch + Wallet Set',
+                12000,
+                'image/ladies watch.jpg'
+            )">Add to Cart</button>
+
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="flash-card">
+
+            <div class="sale-tag">-50%</div>
+
+            <img src="image/female shoe.jpg" alt="">
+
+            <h3>Women Ladies Platform Chunky Loafers – Black Office Slip-On Shoes</h3>
+
+            <div class="prices">
+                <span class="new-price">₦45,000</span>
+                <span class="old-price">₦90,000</span>
+            </div>
+
+            <button onclick="addToCart(
+                'Women Ladies Platform Chunky Loafers',
+                45000,
+                'image/female shoe.jpg'
+            )">Add to Cart</button>
+
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="flash-card">
+
+            <div class="sale-tag">-35%</div>
+
+            <img src="image/panties.jpg" alt="">
+
+            <h3>Ladies Sexy G-String Panties (set Of 6)</h3>
+
+            <div class="prices">
+                <span class="new-price">₦10,000</span>
+                <span class="old-price">₦15,500</span>
+            </div>
+
+            <button onclick="addToCart(
+                'Ladies Sexy G-String Panties',
+                10000,
+                'image/panties.jpg'
+            )">Add to Cart</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <!-- TOP FOOTER -->
+    <div class="footer-top">
+
+        <!-- LOGO -->
+        <div class="footer-logo">
+            <h1>L-BUY</h1>
+        </div>
+
+        <!-- NEWSLETTER -->
+        <div class="newsletter">
+
+            <h3>NEW TO L-BUY?</h3>
+
+            <p>
+                Subscribe to our newsletter to get updates on our latest fashion deals and offers 💕
+            </p>
+
+            <!-- CHECKBOX -->
+            <div class="check">
+                <input type="checkbox">
+                <span>I agree to the Privacy Policy</span>
+            </div>
+
+            <!-- INPUT -->
+            <div class="newsletter-input">
+
+                <input
+                    type="email"
+                    placeholder="Enter E-mail Address"
+                >
+
+                <button>Subscribe</button>
+
+            </div>
+
+        </div>
+
+        <!-- APP -->
+        <div class="download-app">
+
+            <h3>DOWNLOAD L-BUY APP</h3>
+
+            <p>Get access to exclusive offers!</p>
+
+            <div class="app-buttons">
+
+                <button>App Store</button>
+                <button>Google Play</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- BOTTOM FOOTER -->
+    <div class="footer-bottom">
+
+        <!-- COLUMN 1 -->
+        <div class="footer-column">
+
+            <h4>NEED HELP?</h4>
+
+            <a href="#">Chat with us</a>
+            <a href="#">Help Center</a>
+            <a href="#">Contact Us</a>
+
+            <h4 class="space-top">USEFUL LINKS</h4>
+
+            <a href="#">Track Order</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Return Policy</a>
+
+        </div>
+
+        <!-- COLUMN 2 -->
+        <div class="footer-column">
+
+            <h4>ABOUT L-BUY</h4>
+
+            <a href="#">About us</a>
+            <a href="#">Careers</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Flash Sales</a>
+
+        </div>
+
+        <!-- COLUMN 3 -->
+        <div class="footer-column">
+
+            <h4>MAKE MONEY WITH L-BUY</h4>
+
+            <a href="#">Sell on L-BUY</a>
+            <a href="#">Become a Vendor</a>
+            <a href="#">Affiliate Program</a>
+
+        </div>
+
+        <!-- COLUMN 4 -->
+        <div class="footer-column">
+
+            <h4>L-BUY INTERNATIONAL</h4>
+
+            <a href="#">Nigeria</a>
+            <a href="#">Ghana</a>
+            <a href="#">Kenya</a>
+            <a href="#">South Africa</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="index.js"></script>
+
+</body>
+</html>

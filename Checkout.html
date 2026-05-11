@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout</title>
+
+    <link rel="stylesheet" href="checkout.css">
+
+</head>
+
+<body>
+
+    <section class="checkout-page">
+
+        <!-- LEFT -->
+        <div class="checkout-form">
+
+            <h1>Checkout 💕</h1>
+
+            <form id="payment-form">
+
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email"
+                    placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="text"
+                    placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Delivery Address</label>
+
+                    <textarea
+                    placeholder="Enter delivery address"
+                    required></textarea>
+                </div>
+
+                <button type="submit" class="pay-btn">
+                    Place Order
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="checkout-summary">
+
+            <h2>Order Summary</h2>
+
+            <div id="checkout-items"></div>
+
+            <div class="summary-total">
+                <h3>Total:</h3>
+
+                <span id="checkout-total">
+                    ₦0
+                </span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="checkout.js"></script>
+
+</body>
+</html>

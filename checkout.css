@@ -1,0 +1,150 @@
+/* BODY */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff5f8;
+    padding: 40px 5%;
+}
+
+/* PAGE */
+.checkout-page{
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 30px;
+}
+
+/* FORM */
+.checkout-form,
+.checkout-summary{
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* TITLE */
+.checkout-form h1{
+    margin-bottom: 30px;
+
+    color: #ff4d88;
+}
+
+/* INPUT GROUP */
+.input-group{
+    margin-bottom: 20px;
+}
+
+/* LABEL */
+.input-group label{
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+/* INPUT */
+.input-group input,
+.input-group textarea{
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+/* TEXTAREA */
+textarea{
+    resize: none;
+    height: 120px;
+}
+
+/* BUTTON */
+.pay-btn{
+    width: 100%;
+
+    background: #ff4d88;
+    color: white;
+
+    border: none;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.pay-btn:hover{
+    background: #e60073;
+}
+
+/* SUMMARY TITLE */
+.checkout-summary h2{
+    margin-bottom: 25px;
+}
+
+/* ITEM */
+.checkout-item{
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+/* IMAGE */
+.checkout-item img{
+    width: 80px;
+    height: 80px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+/* TOTAL */
+.summary-total{
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #ddd;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* PRICE */
+#checkout-total{
+    color: #ff4d88;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* MOBILE */
+@media(max-width: 900px){
+
+    .checkout-page{
+        grid-template-columns: 1fr;
+    }
+
+}
