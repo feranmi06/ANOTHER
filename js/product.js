@@ -2,6 +2,15 @@
 const product =
 JSON.parse(localStorage.getItem("selectedProduct"));
 
+function resolvePageImage(path){
+
+    if(path.startsWith("image/")){
+        return `../${path}`;
+    }
+
+    return path;
+}
+
 // GET ELEMENTS
 const productImg =
 document.getElementById("product-img");
@@ -13,7 +22,7 @@ const productPrice =
 document.getElementById("product-price");
 
 // SHOW PRODUCT
-productImg.src = product.image;
+productImg.src = resolvePageImage(product.image);
 
 productName.innerText = product.name;
 

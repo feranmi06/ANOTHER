@@ -54,5 +54,5 @@ function logout(){
     alert("Logged out");
 
     window.location.href =
-    "login.html";
+    "pages/login.html";
 }

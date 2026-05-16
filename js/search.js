@@ -9,34 +9,43 @@ const products = [
     {
         name: "Luxury Pink Dress",
         price: 25000,
-        image: "images/dress.jpg"
+        image: "image/dress.jpg"
     },
 
     {
         name: "Premium Handbag",
         price: 18000,
-        image: "images/bag.jpg"
+        image: "image/bag.jpg"
     },
 
     {
         name: "Pink Heels",
         price: 15000,
-        image: "images/heels.jpg"
+        image: "image/heels.jpg"
     },
 
     {
         name: "Luxury Wig",
         price: 45000,
-        image: "images/wig.jpg"
+        image: "image/wig.avif"
     },
 
     {
         name: "Denim Jacket",
         price: 22000,
-        image: "images/jacket.jpg"
+        image: "image/jacket.jpg"
     }
 
 ];
+
+function resolvePageImage(path){
+
+    if(path.startsWith("image/")){
+        return `../${path}`;
+    }
+
+    return path;
+}
 
 // DIV
 const results =
@@ -70,7 +79,7 @@ filteredProducts.forEach(product => {
     '${product.image}'
     )">
 
-        <img src="${product.image}">
+        <img src="${resolvePageImage(product.image)}">
 
         <div class="product-info">
 

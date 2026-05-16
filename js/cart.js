@@ -3,6 +3,15 @@ let cart =
 JSON.parse(localStorage.getItem("cart"))
 || [];
 
+function resolvePageImage(path){
+
+    if(path.startsWith("image/")){
+        return `../${path}`;
+    }
+
+    return path;
+}
+
 // DIV
 const cartItems =
 document.getElementById("cart-items");
@@ -39,7 +48,7 @@ function displayCart(){
 
         <div class="cart-item">
 
-            <img src="${item.image}" alt="">
+            <img src="${resolvePageImage(item.image)}" alt="">
 
             <div class="cart-info">
 

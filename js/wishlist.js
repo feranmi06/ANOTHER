@@ -3,6 +3,15 @@ let wishlist =
 JSON.parse(localStorage.getItem("wishlist"))
 || [];
 
+function resolvePageImage(path){
+
+    if(path.startsWith("image/")){
+        return `../${path}`;
+    }
+
+    return path;
+}
+
 // DIV
 const wishlistItems =
 document.getElementById("wishlist-items");
@@ -21,7 +30,7 @@ wishlist.forEach(product => {
 
     <div class="product-card">
 
-        <img src="${product.image}">
+        <img src="${resolvePageImage(product.image)}">
 
         <div class="product-info">
 

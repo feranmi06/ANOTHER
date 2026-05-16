@@ -6,27 +6,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
         {
             name: "Luxury Pink Dress",
-            image: "images/dress.jpg"
+            image: "image/dress.jpg"
         },
 
         {
             name: "Premium Handbag",
-            image: "images/bag.jpg"
+            image: "image/bag.jpg"
         },
 
         {
             name: "Pink Heels",
-            image: "images/heels.jpg"
+            image: "image/heels.jpg"
         },
 
         {
             name: "Luxury Wig",
-            image: "images/wig.jpg"
+            image: "image/wig.avif"
         },
 
         {
             name: "Denim Jacket",
-            image: "images/jacket.jpg"
+            image: "image/jacket.jpg"
         }
 
     ];
@@ -281,31 +281,31 @@ const products = [
     {
         name: "Luxury Pink Dress",
         price: 25000,
-        image: "images/dress.jpg"
+        image: "image/dress.jpg"
     },
 
     {
         name: "Premium Handbag",
         price: 18000,
-        image: "images/bag.jpg"
+        image: "image/bag.jpg"
     },
 
     {
         name: "Pink Heels",
         price: 15000,
-        image: "images/heels.jpg"
+        image: "image/heels.jpg"
     },
 
     {
         name: "Luxury Wig",
         price: 45000,
-        image: "images/wig.jpg"
+        image: "image/wig.avif"
     },
 
     {
         name: "Denim Jacket",
         price: 22000,
-        image: "images/jacket.jpg"
+        image: "image/jacket.jpg"
     }
 
 ];
